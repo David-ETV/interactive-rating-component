@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@600&family=Overpass:wght@400;700&display=swap');
+
+:root{
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 24%);
+  --Dark-Blue: hsl(213, 20%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+/* HTML5 Reset Stylesheet*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;  
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Dark-Blue);
+  min-height: 100vh;
+  line-height:1;
+  font-family: 'Overpass', sans-serif;
+}
+
+.rating-section, .thankyou-section{
+  max-width: 300px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #212932, #28303b);
+  box-shadow:  inset 10px -10px 
+  100px 0px var(--Very-Dark-Blue);
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+.rating-icon, .rating-buton-number{
+  display: grid;
+  place-content: center;
+  color: var(--Light-Grey);
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: var(--Medium-Grey);
+  border: none;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.title{
+  color: var(--White);
+  font-size: 1.2em;
+  margin-bottom: 1.2rem;
+}
+
+.parragraph{
+  color: var(--Light-Grey);
+  letter-spacing: -1px;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating-buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating-buton-number:hover{
+background-color: var(--Orange);
+color: var(--White);
+cursor: pointer;
+}
+
+.rating-buton-number:focus{
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+
+.rating-submit{
+  width: 100%;
+  height: 2.5rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--Orange);
+  color: var(--White);
+  border: none;
+  border-radius: 50px;
+}
+
+.rating-submit:hover{
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.thankyou-section{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.thanyou-icon img{
+  width: 7.5rem;
+  margin-bottom: 1.5rem;
+}
+.thankyou-selected{
+  background-color: var(--Medium-Grey);
+  width: 12rem;
+  height: 1.7rem;
+  padding: 14px 0 0 0;
+  margin-bottom: 2rem;
+  color: var(--Orange);
+  border-radius: 50px;
+  text-align: center;
+}
+
+@media (max-width: 300px){
+  .rating-section, .thankyou-section{
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+}
+
